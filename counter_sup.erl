@@ -1,8 +1,8 @@
 - module(counter_sup).
-- export([start/1, init/1]).
+- export([start_link/1, init/1]).
 - behavior(supervisor).
 
-start(Arguments) ->
+start_link(Arguments) ->
 	supervisor:start_link({local, ?MODULE}, ?MODULE, Arguments).
 
 init(Arguments) ->
